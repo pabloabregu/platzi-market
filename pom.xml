@@ -10,12 +10,13 @@
 	</parent>
 	<groupId>com.platzi</groupId>
 	<artifactId>platzi-market</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>platzi-market</name>
 	<description>Proyecto para crear una API con Spring</description>
 	<properties>
 		<java.version>11</java.version>
 		<org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+		<start-class>com.platzi.market.PlatziMarketApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -62,6 +63,12 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.9.2</version>
 		</dependency>
+
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -70,7 +77,19 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>2.5.2</version>
+				<configuration>
+					<mainClass>com.platzi.market.PlatziMarketApplication</mainClass>
+					<layout>JAR</layout>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
