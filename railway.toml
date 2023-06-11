@@ -1,2 +1,2 @@
 [env]
-java.runtime.version=11
+JAVA_RUNTIME_VERSION = "11"
