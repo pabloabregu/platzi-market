@@ -1,2 +1,2 @@
-[build]
-java.runtime.version=11
+[env]
+RAILWAY_RUNTIME_VERSION = "java11"
