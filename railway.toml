@@ -1,2 +1,2 @@
-[env]
+[build]
 java.runtime.version=11
