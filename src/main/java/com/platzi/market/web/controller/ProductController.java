@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/products")
-@CrossOrigin(origins = "https://platzi-market-production-e33b.up.railway.app", maxAge = 3600)
+@CrossOrigin(origins = "https://platzi-market-production-e33b.up.railway.app/")
 public class ProductController {
     @Autowired
     private ProductService productService;
