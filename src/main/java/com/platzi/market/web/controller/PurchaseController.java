@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/purchases")
-@CrossOrigin(origins = "http://127.0.0.1:5500", maxAge = 3600)
+@CrossOrigin(origins = "https://platzi-market-production-e33b.up.railway.app", maxAge = 3600)
 public class PurchaseController {
     @Autowired
     private PurchaseService purchaseService;
